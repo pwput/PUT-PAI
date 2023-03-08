@@ -1,0 +1,35 @@
+html,body,p{
+    margin: 0;
+    padding: 0;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+*{
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+header{
+align-items: baseline;
+display: inline-flex;
+    flex-direction: row;
+}
+
+header #title{
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+nav{
+    flex-grow: ;
+}
