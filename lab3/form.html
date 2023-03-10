@@ -5,10 +5,14 @@
   <title>JavaScript</title>
 </head>
 <body>
+<script src="form_check.js" defer></script>
+<link href="style.css" rel="stylesheet">
 <form name="dane_osobowe">
   <table>
     <tr><td>Imię</td><td><input type="text" name="f_imie"></td></tr>
+    <tr><td><span class="err" id="e_imie"></span></td></tr>
     <tr><td>Nazwisko</td><td><input type="text" name="f_nazwisko"></td></tr>
+    <tr><td><span class="err" id="e_nazwisko"></span></td></tr>
     <tr>
       <td>Płeć</td>
       <td>
@@ -17,13 +21,17 @@
       </td>
     </tr>
     <tr><td>N. panieńskie</td><td><input type="text" name="f_nazwisko_p"></td></tr>
+    <tr><td><span class="err" id="e_npanienskie"></span></td></tr>
     <tr><td>E-mail</td><td><input type="text" name="f_email"></td></tr>
+    <tr><td><span class="err" id="e_email"></span></td></tr>
     <tr><td>Kod pocztowy</td><td><input type="text" name="f_kod"></td></tr>
+    <tr><td><span class="err" id="e_kod"></span></td></tr>
     <tr><td>Ulica/Osiedle</td><td><input type="text" name="f_ulica"></td></tr>
+    <tr><td><span class="err" id="e_ulica"></span></td></tr>
     <tr><td>Miasto</td><td><input type="text" name="f_miasto"></td></tr>
-    <tr><td>Uwagi</td><td><textarea rows="5" cols="15" name="uwagi"></textarea>
-    </td></tr>
-    <tr><td colspan="2"><input type="submit" value="Prześlij"></td></tr>
+    <tr><td><span class="err" id="e_miasto"></span></td></tr>
+    <tr><td>Uwagi</td><td><textarea rows="5" cols="15" name="uwagi"></textarea></td></tr>
+    <tr><td colspan="2"><input type="button" value="Prześlij" onclick="validate(this.form)"></td></tr>
   </table>
 </form>
 </body>
