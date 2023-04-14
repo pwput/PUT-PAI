@@ -1,0 +1,32 @@
+﻿@{
+    var rules = new List<string>();
+
+    if (Session["rules"] != null)
+    {
+        rules = (List<String>)Session["rules"];
+    }
+
+    var nextRuleNumber = rules.Count + 1;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rules</title>
+</head>
+<body>
+    <h1>Fight Club rules</h1>
+
+    <ol>
+        @foreach (var rule in rules)
+        {
+            <li>@rule</li>
+        }
+    </ol>
+
+    <form method="post" action="~/RulesRedirect.cshtml">
+        <label for="rule">Zasada nr @nextRuleNumber:</label><br>
+        <input name="rule" id="rule" type="text" />
+        <input type="submit" id="Add" value="Dodaj" asp-page-handler="rule" />
+    </form>
+</body>
+</html>
